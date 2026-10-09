@@ -21,82 +21,133 @@
 <body>
 
 <h1>Politique de confidentialité — Basira Read</h1>
-<p class="date">Dernière mise à jour : 12 septembre 2026</p>
+<p class="date">Dernière mise à jour : 9 octobre 2026 (version 1.0.5 de l’application)</p>
 
 <h2>En une phrase</h2>
 <p>
-  <span class="fort">Rien de ce que vous lisez ne quitte votre appareil.</span>
-  Basira Read ne collecte aucune donnée personnelle, n’en partage aucune, n’affiche aucune
-  publicité et ne demande la création d’aucun compte.
+  <span class="fort">Par défaut, rien de ce que vous lisez, écrivez ou dictez ne quitte votre
+  appareil.</span> Basira Read n’a ni compte, ni publicité, ni statistique d’usage. Une seule
+  exception, que vous déclenchez vous-même : si vous choisissez une voix « en ligne », le texte à
+  prononcer est envoyé au service qui fabrique cette voix (voir plus bas).
 </p>
 
 <h2>Ce que l’application ne fait pas</h2>
 <ul>
-  <li>Elle n’envoie <span class="fort">aucun</span> de vos documents, ni leur contenu, ni leur nom,
-      ni leur texte reconnu, à qui que ce soit.</li>
+  <li>Elle n’envoie <span class="fort">aucun</span> de vos documents, ni leur nom, ni leur fichier,
+      à qui que ce soit.</li>
   <li>Elle ne collecte <span class="fort">aucune</span> statistique d’usage, aucune donnée de
       diagnostic, aucun identifiant publicitaire.</li>
   <li>Elle ne demande <span class="fort">ni</span> votre position, <span class="fort">ni</span> vos
-      contacts, <span class="fort">ni</span> votre microphone, <span class="fort">ni</span> votre
-      appareil photo.</li>
-  <li>Elle ne contient aucune publicité et aucun traceur.</li>
+      contacts, <span class="fort">ni</span> votre appareil photo.</li>
+  <li>Elle ne contient aucune publicité et aucun traceur. Aucun compte n’est à créer.</li>
 </ul>
 
-<h2>Les seules connexions qu’elle ouvre</h2>
+<h2>Le microphone (dictée)</h2>
 <p>
-  L’application ouvre une connexion dans deux cas, et uniquement lorsque vous le demandez
-  explicitement en appuyant sur un bouton :
+  L’application propose de <span class="fort">dicter</span> au lieu de taper : dans son écran
+  Dictée, et, si vous l’activez, dans le champ de texte d’une autre application. Elle demande pour
+  cela l’autorisation d’utiliser le microphone. Le micro n’est ouvert que pendant une dictée que
+  vous avez lancée ; une notification « Dictée en cours » reste affichée tout ce temps.
 </p>
 <ul>
-  <li><span class="fort">Installer une langue de reconnaissance.</span> Le fichier de données de la
-      langue choisie est téléchargé depuis le dépôt public du projet Tesseract.</li>
-  <li><span class="fort">Installer une voix.</span> Le modèle de la voix choisie est téléchargé
-      depuis le dépôt public du projet sherpa-onnx.</li>
+  <li><span class="fort">Moteur de l’application (par défaut)</span> : la voix est reconnue
+      <span class="fort">sur votre téléphone</span>. Le son n’est envoyé nulle part. La dernière
+      dictée est gardée dans l’espace privé de l’application, pour pouvoir la réécouter ou la
+      reprendre ; elle est remplacée par la suivante.</li>
+  <li><span class="fort">Moteur de Google</span> : si vous le choisissez, ou si aucun modèle de
+      dictée n’est encore installé sur le téléphone, la reconnaissance est confiée au service de
+      reconnaissance vocale d’Android fourni par Google. Selon votre téléphone, le son peut alors
+      être traité par les serveurs de Google, selon la
+      <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.
+      Basira Read ne reçoit en retour que le texte reconnu.</li>
+</ul>
+
+<h2>Les voix en ligne</h2>
+<p>
+  Les voix de l’application et la plupart des voix du téléphone fonctionnent sans connexion. Mais
+  certaines voix sont marquées <span class="fort">« en ligne »</span> dans l’écran des voix :
+</p>
+<ul>
+  <li><span class="fort">Voix Microsoft</span> : si vous en choisissez une, le texte à prononcer
+      est envoyé, phrase par phrase, au service de synthèse vocale de Microsoft, qui renvoie le son.
+      Rien d’autre n’est envoyé : pas de nom de livre, pas d’identifiant de compte ou d’appareil
+      (seul un identifiant technique aléatoire, recréé à chaque connexion, accompagne la demande).
+      Ce traitement relève de la
+      <a href="https://privacy.microsoft.com/fr-fr/privacystatement">déclaration de confidentialité
+      de Microsoft</a>.</li>
+  <li><span class="fort">Voix Google en ligne</span> : elles sont produites par le moteur de synthèse
+      vocale de Google installé sur votre téléphone, qui peut envoyer le texte à ses serveurs.</li>
 </ul>
 <p>
-  Dans les deux cas, l’application <span class="fort">télécharge</span> un fichier : elle
-  n’envoie rien. Aucun contenu de requête, aucun paramètre, aucun identifiant. Une fois vos langues
-  et vos voix installées, l’application fonctionne entièrement hors ligne.
+  Ces voix ne sont <span class="fort">jamais</span> choisies par défaut. Revenir à une voix hors
+  ligne suffit pour que plus rien ne parte.
+</p>
+
+<h2>Les téléchargements</h2>
+<p>
+  L’application télécharge des fichiers uniquement lorsque vous le demandez en appuyant sur un
+  bouton. Elle n’envoie rien à cette occasion : aucun contenu, aucun paramètre, aucun identifiant.
+</p>
+<ul>
+  <li><span class="fort">Une langue de reconnaissance de texte</span>, depuis le dépôt public du
+      projet Tesseract.</li>
+  <li><span class="fort">Une voix de l’application</span>, depuis le dépôt public du projet
+      sherpa-onnx.</li>
+  <li><span class="fort">Un modèle de dictée</span>, depuis le dépôt public du projet sherpa-onnx.</li>
+  <li><span class="fort">Une langue de traduction</span>, par la bibliothèque ML Kit de Google.
+      La traduction elle-même se fait ensuite sur le téléphone.</li>
+</ul>
+<p>
+  Une fois ces éléments installés, et tant que vous utilisez des voix hors ligne et le moteur de
+  dictée de l’application, Basira Read fonctionne entièrement hors ligne.
 </p>
 
 <h2>Ce qui est conservé sur votre téléphone</h2>
-<p>
-  Pour ne pas vous faire attendre deux fois la même reconnaissance, l’application conserve, dans
-  son espace de stockage privé :
-</p>
+<p>Dans son espace de stockage privé, l’application conserve :</p>
 <ul>
   <li>la liste des livres que vous avez ouverts et votre position de lecture ;</li>
-  <li>le texte reconnu de chaque page déjà traitée ;</li>
-  <li>vos réglages, et les langues et voix que vous avez installées.</li>
+  <li>le texte reconnu de chaque page déjà traitée, et les traductions que vous avez faites ;</li>
+  <li>vos notes et vos cartes mentales ;</li>
+  <li>la dernière dictée ;</li>
+  <li>vos réglages, et les langues, voix et modèles que vous avez installés.</li>
 </ul>
 <p>
-  Ces données sont lisibles par la seule application Basira Read. Elles ne sont jamais transmises.
-  Retirer un livre de la bibliothèque efface son texte reconnu ; désinstaller l’application efface
-  l’ensemble.
+  Ces données sont lisibles par la seule application Basira Read et ne sont jamais transmises.
+  Les notes ne sortent du téléphone que si vous les exportez vous-même. Retirer un livre de la
+  bibliothèque efface son texte reconnu ; désinstaller l’application efface l’ensemble.
 </p>
 
 <h2>La lecture d’écran, et l’API d’accessibilité</h2>
 <p>
-  L’application propose de lire à voix haute le texte affiché par les <span class="fort">autres</span>
-  applications. Cette fonction repose sur le service d’accessibilité d’Android. Elle est
-  <span class="fort">désactivée par défaut</span> : rien ne se produit tant que vous ne l’avez pas
-  vous-même autorisée dans les réglages d’Android, et vous pouvez la retirer à tout moment au même
-  endroit.
+  L’application est un outil d’accessibilité : elle lit à voix haute le texte affiché par les
+  <span class="fort">autres</span> applications, et permet d’y dicter du texte, pour les personnes
+  qui ont du mal à lire ou à taper. Cette fonction repose sur le service d’accessibilité d’Android.
+  Elle est <span class="fort">désactivée par défaut</span> : rien ne se produit tant que vous ne
+  l’avez pas vous-même autorisée dans les réglages d’Android, et vous pouvez la retirer à tout
+  moment au même endroit.
 </p>
-<p>Lorsqu’elle est active, et seulement quand vous touchez un texte à l’écran :</p>
+<p>Lorsqu’elle est active, le service :</p>
 <ul>
-  <li>l’application lit l’arbre d’accessibilité pour retrouver le texte situé sous votre doigt ;</li>
-  <li>si ce texte est une image, elle prend une capture de l’écran pour le reconnaître.</li>
+  <li>lit l’arbre d’accessibilité pour retrouver le texte que vous touchez ou que vous
+      sélectionnez ;</li>
+  <li>si ce texte est une image, prend une capture de l’écran pour le reconnaître ;</li>
+  <li>affiche quelques icônes (lire, dicter…) près d’un texte sélectionné ou d’un champ de saisie.</li>
+</ul>
+<p>Il n’agit dans une autre application que sur votre demande, et seulement pour :</p>
+<ul>
+  <li><span class="fort">écrire</span> dans le champ que vous avez choisi le texte que vous venez de
+      dicter ;</li>
+  <li>appuyer sur <span class="fort">« Copier »</span> pour récupérer le texte que vous avez
+      sélectionné, quand vous avez touché l’icône « lire » ;</li>
+  <li>en lecture continue, si vous l’activez, <span class="fort">faire défiler</span> ou tourner la
+      page pour lire la suite.</li>
 </ul>
 <p>
-  Ce texte et cette capture sont traités <span class="fort">sur votre téléphone</span>, servent
-  uniquement à prononcer le passage touché, et sont effacés aussitôt : rien n’est enregistré, rien
-  n’est transmis, rien n’est conservé après la lecture. L’application ne surveille pas votre écran
-  en continu et ne lit rien de ce que vous n’avez pas touché.
-</p>
-<p>
-  Elle n’agit jamais sur les autres applications : aucun appui, aucun geste, aucun défilement n’est
-  déclenché à votre place. Ce service <span class="fort">lit, il n’agit pas</span>.
+  Il ne valide, n’envoie, n’achète ni ne supprime jamais rien à votre place. Les champs de mot de
+  passe sont ignorés. Le texte lu et les captures sont traités <span class="fort">sur votre
+  téléphone</span>, servent uniquement à la lecture ou à la dictée demandée, et ne sont ni
+  enregistrés ni transmis — sauf si vous avez choisi une voix en ligne, auquel cas le texte à
+  prononcer suit le chemin décrit plus haut.
 </p>
 
 <h2>Achats</h2>
@@ -110,14 +161,12 @@
 <h2>Enfants</h2>
 <p>
   L’application ne s’adresse pas spécifiquement aux enfants et ne collecte aucune donnée les
-  concernant, ni concernant personne d’autre.
+  concernant.
 </p>
 
 <h2>Modifications</h2>
 <p>
-  Toute modification de cette politique sera publiée sur cette page, avec sa date. Si une future
-  version de l’application devait collecter une donnée quelconque, cela serait écrit ici
-  explicitement, et vous en seriez informé dans l’application avant que cela ne prenne effet.
+  Toute modification de cette politique est publiée sur cette page, avec sa date.
 </p>
 
 <h2>Contact</h2>
